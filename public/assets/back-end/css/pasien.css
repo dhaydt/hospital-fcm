@@ -1,0 +1,38 @@
+/* Global */
+
+.bg-grey{
+    background-color: #afb7bf;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+.table-responsive{
+    overflow-y: hidden;
+}
+
+/* add pasien */
+.pasien-form .input-group-prepend{
+    width: 100px;
+}
+
+.pasien-form.focused .input-group-prepend span {
+    background-color: #afb7bf;
+    font-weight: 700;
+}
+
+/* navbar */
+.search-btn{
+ border: none;
+ background-color: transparent;
+ display: flex;
+ align-items: center;
+}
+
+.btn-clear {
+    display: flex;
+    align-items: center;
+}

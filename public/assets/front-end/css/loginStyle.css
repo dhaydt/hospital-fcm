@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #32DB46;
+    --secondary-color: #BFFCC6;
+    --third-color: #2D3194;
+    --forth-color: #C4FAF8;
+}
+
+body{
+    font-family: 'Poppins', sans-serif !important;
+    padding: 0;
+    margin: 0;
+}
+body .main-content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-row  {
+    max-width: 600px;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.container-login{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.login-card{
+    z-index: 1;
+    height: 100%;
+    position: relative;
+}
+.card-header.head-login{
+    border-bottom: none;
+    margin-top: 9vh;
+}
+.app-title h1 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 20px;
+}
+.card-header .avatar-login {
+    height: 110px;
+    width: 112px;
+    border: 3px solid var(--primary-color);
+}
+
+.avatar.logo-avatar {
+    height: 110px;
+    width: 110px;
+}
+
+.logo-avatar img {
+    height: 100%;
+    width: 100%;
+}
+.title-login {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    color: var(--third-color);
+}
+.text-center .btn-login{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+    color: var(--third-color);
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 12px;
+}
+.custom-control .label{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+}
+.label-forgot {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #6d6d6d;
+    text-decoration: none;
+}
+.login-icon {
+    color: #6d6d6d;
+}
+
+#changePassTarget a {
+    text-decoration: none;
+}
+img.clipt-path{
+    position: absolute;
+    top: 0;
+    height: 220px;
+    width: 100%;
+    right: 0;
+}
+
+img.clipt-path2{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}

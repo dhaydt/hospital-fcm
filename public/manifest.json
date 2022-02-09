@@ -1,0 +1,17 @@
+{
+    "name": "Bidan Ratna Dewi",
+    "short_name": "BRD",
+    "start_url": "/",
+    "background_color": "#6777ef",
+    "description": "Praktek Bidan Ratna Dewi",
+    "display": "fullscreen",
+    "theme_color": "#bffcc6",
+    "icons": [
+        {
+            "src": "/assets/front-end/img/logo.jpeg",
+            "sizes": "812x812",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+:root {
+    --primary-color: #32DB46;
+    --secondary-color: #BFFCC6;
+    --third-color: #2D3194;
+    --forth-color: #C4FAF8;
+}
+
+.card.card-adminlogin{
+    background-color: var(--secondary-color);
+}
+
+.card.shadow {
+    box-shadow: 0 0 2rem 0 #34a14059 !important;
+}
+
+.btn.loginAdmin-btn{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--third-color);
+}
+
+.nav-avatar{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.796);
+}
+
+.nav-img-brand{
+    height: 100%;
+    width: 100%;
+}

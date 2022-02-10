@@ -30,9 +30,9 @@ messaging.onBackgroundMessage(function (payload) {
         payload
     );
     /* Customize notification here */
-    const notificationTitle = "Background Message Title";
+    const notificationTitle = "Bidan Ratna Dewi";
     const notificationOptions = {
-        body: "Bidan Ratna Dewi.",
+        body: "Sudah waktunya berobat.",
         icon: "/assets/front-end/img/logo.jpeg",
     };
 

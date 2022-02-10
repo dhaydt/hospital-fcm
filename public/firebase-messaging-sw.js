@@ -24,7 +24,7 @@ firebase.initializeApp({
 Retrieve an instance of Firebase Messaging so that it can handle background messages.
 */
 const messaging = firebase.messaging();
-messaging.onBackgroundMessage(function (payload) {
+messaging.setBackgroundMessageHandler(function (payload) {
     console.log(
         "[firebase-messaging-sw.js] Received background message ",
         payload
@@ -32,7 +32,7 @@ messaging.onBackgroundMessage(function (payload) {
     /* Customize notification here */
     const notificationTitle = "Bidan Ratna Dewi";
     const notificationOptions = {
-        body: "Sudah waktunya berobat.",
+        body: "Sudah waktunya berobbat.",
         icon: "/assets/front-end/img/logo.jpeg",
     };
 

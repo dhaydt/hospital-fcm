@@ -3,10 +3,11 @@
 @section('content')
 <div class="container-fluid px-3 my-6">
 
-            <form action="{{ route('send.notification') }}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-primary">Send Notification</button>
-            </form>
+    {{-- <form action="{{ route('send.notification') }}" method="POST">
+        @csrf --}}
+        <button onclick="sendNotif()" class="btn btn-primary">Send Notification</button>
+        {{--
+    </form> --}}
     <div class="row">
         @if (!Route::is('home2'))
         <div class="col-12 mb-3">
@@ -15,7 +16,8 @@
                 <div class="col-4 px-2">
                     <div class="card menu-card mb-3">
                         <a href="{{ route('checkup-cat', ['id' => $c->id]) }}" class="img-menu">
-                            <img src="{{ asset('storage/category').'/'.$c['image'] }}" class="card-img-top" alt="menu-img">
+                            <img src="{{ asset('storage/category').'/'.$c['image'] }}" class="card-img-top"
+                                alt="menu-img">
                         </a>
                         <div class="menu-cate">
                             <label class="menu-title mb-0">{{ $c->name }}</label>
@@ -48,6 +50,28 @@
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script>
+    function sendNotif(){
+        console.log('work');
+        $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                $.ajax({
+                    url: '{{ route("send.notification") }}',
+                    type: 'POST',
+
+                    // dataType: 'JSON',
+                    success: function (response) {
+                        console.log('notif sended successfully.');
+                    },
+                    error: function (err) {
+                        alert('User Chat Token Error'+ err);
+                    },
+                });
+    }
+
     var firebaseConfig = {
         apiKey: "AIzaSyDNHG694SRE2nSW7Dc276dctM2dyPi_w2w",
         authDomain: "fcm-demo-60928.firebaseapp.com",
@@ -83,7 +107,7 @@
                     },
                     dataType: 'JSON',
                     success: function (response) {
-                        alert('Token saved successfully.');
+                        console.log('Token saved successfully.');
                     },
                     error: function (err) {
                         alert('User Chat Token Error'+ err);

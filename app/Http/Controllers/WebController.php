@@ -131,7 +131,7 @@ class WebController extends Controller
         $data = [
             'registration_ids' => $firebaseToken,
             'notification' => [
-                'title' => 'Bidan Ratna Sari',
+                'title' => 'Bidan Ratna Dewi',
                 'body' => 'Sudah waktu nya berobat',
                 'content_available' => true,
                 'priority' => 'high',

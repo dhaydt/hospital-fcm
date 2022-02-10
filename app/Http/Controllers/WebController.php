@@ -36,22 +36,6 @@ class WebController extends Controller
         return view('web-views.home2', compact('blog', 'cat'));
     }
 
-    public function getKembali()
-    {
-        $user = auth('customer')->id();
-        $date = Carbon::now()->format('Y-m-d');
-        $check = Checkup::where(['pasien_id' => $user, 'kembali' => $date])->get();
-        // if($)
-        foreach ($check as $c) {
-            // dd($c->kembali, $date);
-            if ($c->kembali == $date) {
-                return \App::call('App\Http\Controllers\WebController@sendNotification');
-            }
-        }
-
-        return 'no';
-    }
-
     public function content($id)
     {
         if (auth('customer')->user() == null) {
@@ -164,5 +148,21 @@ class WebController extends Controller
         $response = curl_exec($ch);
 
         return;
+    }
+
+    public function getKembali()
+    {
+        $user = auth('customer')->id();
+        $date = Carbon::now()->format('Y-m-d');
+        $check = Checkup::where(['pasien_id' => $user, 'kembali' => $date])->get();
+        // if($)
+        foreach ($check as $c) {
+            // dd($c->kembali, $date);
+            if ($c->kembali == $date) {
+                return \App::call('App\Http\Controllers\WebController@sendNotification');
+            }
+        }
+
+        return 'no';
     }
 }

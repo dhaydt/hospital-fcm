@@ -36,6 +36,7 @@ Route::get('/pasien/home', [WebController::class, 'home2'])->name('home2');
 Route::get('/content2/{id}', [WebController::class, 'content2'])->name('content2');
 Route::post('/save-token', [WebController::class, 'saveToken'])->name('save-token');
 Route::post('/send-notif', [WebController::class, 'sendNotification'])->name('send.notification');
+Route::get('/getDate', [WebController::class, 'getKembali'])->name('getKembali');
 
 Route::get('/', [WebController::class, 'index'])->name('home');
 Route::get('/pasien/register', [RegisterController::class, 'index'])->name('customersReg');
@@ -56,7 +57,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('table-list', function () {return view('pages.tables'); })->name('table');
     Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 });
-Route::get('/getDate', [WebController::class, 'getKembali'])->name('getKembali');
 
 Route::prefix('content')->name('content.')->group(function () {
     Route::get('/content/{id}', [WebController::class, 'content'])->name('view');

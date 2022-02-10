@@ -5,7 +5,7 @@
 
     {{-- <form action="{{ route('send.notification') }}" method="POST">
         @csrf --}}
-        <button onclick="sendNotif()" class="btn btn-primary">Send Notification</button>
+        {{-- <button onclick="sendNotif()" class="btn btn-primary">Send Notification</button> --}}
         {{--
     </form> --}}
     <div class="row">
@@ -59,15 +59,15 @@
                 });
 
                 $.ajax({
-                    url: '{{ route("send.notification") }}',
-                    type: 'POST',
+                    url: '{{ route("getKembali") }}',
+                    type: 'GET',
 
                     // dataType: 'JSON',
                     success: function (response) {
                         console.log('notif sended successfully.');
                     },
                     error: function (err) {
-                        alert('User Chat Token Error'+ err);
+                        console.log('User Chat Token Error'+ err);
                     },
                 });
     }
@@ -110,7 +110,7 @@
                         console.log('Token saved successfully.');
                     },
                     error: function (err) {
-                        alert('User Chat Token Error'+ err);
+                        console.log('User Chat Token Error'+ err);
                     },
                 });
 
@@ -129,7 +129,8 @@
     });
 
     $(document).ready(function(){
-        initFirebaseMessagingRegistration()
+        initFirebaseMessagingRegistration();
+        sendNotif()
     })
 
 </script>

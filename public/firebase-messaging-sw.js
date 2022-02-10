@@ -7,6 +7,7 @@ importScripts(
     "https://www.gstatic.com/firebasejs/7.23.0/firebase-messaging.js"
 );
 
+
 /*
 Initialize the Firebase app in the service worker by passing in the messagingSenderId.
 * New configuration for app@pulseservice.com

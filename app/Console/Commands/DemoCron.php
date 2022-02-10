@@ -37,9 +37,6 @@ class DemoCron extends Command
      */
     public function handle()
     {
-        // \Log::info('Cron is working fine!');
-        // call('App\Http\Controllers\WebController@getKembali');
-
         return \App::call('App\Http\Controllers\WebController@sendNotification');
     }
 }

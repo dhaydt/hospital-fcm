@@ -32,8 +32,8 @@ messaging.onBackgroundMessage(function (payload) {
     /* Customize notification here */
     const notificationTitle = "Background Message Title";
     const notificationOptions = {
-        body: "Background Message body.",
-        icon: "/itwonders-web-logo.png",
+        body: "Bidan Ratna Dewi.",
+        icon: "/assets/front-end/img/logo.jpeg",
     };
 
     return self.registration.showNotification(

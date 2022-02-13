@@ -6,6 +6,7 @@ use App\Models\category;
 use App\Models\Checkup;
 use App\Models\Content;
 use App\Models\Customer;
+use App\Models\Video;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -20,10 +21,11 @@ class WebController extends Controller
 
         $blog = Content::orderBy('id', 'DESC')->get();
         $cat = category::orderBy('id', 'ASC')->get();
+        $video = Video::orderBy('created_at', 'DESC')->get();
 
         session()->put('page-title', 'home');
 
-        return view('web-views.home', compact('blog', 'cat'));
+        return view('web-views.home', compact('blog', 'cat', 'video'));
     }
 
     public function home2()

@@ -158,15 +158,13 @@ class ContentController extends Controller
     public function videoUpdate(Request $request)
     {
         // dd($request);
-        $pasien = Content::where('id', $request->id)->first();
+        $replace = str_replace('watch?v=', 'embed/', $request->ytUrl);
+        $pasien = Video::where('id', $request->id)->first();
         $pasien->title = $request->title;
         $pasien->cat_id = $request->category;
-        $pasien->description = $request->description;
-        if ($request->file('image')) {
-            $pasien->image = ImageManager::update('content/', $pasien->image, 'png', $request->file('image'));
-        }
+        $pasien->url = $replace;
         $pasien->save();
-        Toastr::success('Data konten berhasil diupdate');
+        Toastr::success('Video konten berhasil diupdate');
 
         return back();
     }
@@ -174,10 +172,9 @@ class ContentController extends Controller
     public function videoDelete($id)
     {
         // dd($id);
-        $pasien = Content::where('id', $id)->first();
-        ImageManager::delete('/content/'.$pasien->image);
+        $pasien = Video::where('id', $id)->first();
         $pasien->delete();
-        Toastr::success('Konten berhasil dihapus');
+        Toastr::success('Video Konten berhasil dihapus');
 
         return back();
     }

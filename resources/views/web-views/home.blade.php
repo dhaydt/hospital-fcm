@@ -32,6 +32,19 @@
             <h4 class="section-title">
                 Edukasi bagi anda
             </h4>
+            @foreach ($video as $v)
+            <div class="card blog-card mb-3">
+                <a href="{{ route('content.view', ['id' => $v->id]) }}" class="img-link">
+                    <iframe id="ytplayer" type="text/html" class="card-img-top" src="{{ $v->url }}"
+                        frameborder="0"></iframe>
+                    {{-- <img src="{{ asset('storage/content').'/'.$b['image'] }}" class="card-img-top" alt="blog-img"> --}}
+                </a>
+                <div class="card-body px-2 py-1">
+                    <h5 class="card-title">{{ $v->title }}</h5>
+                </div>
+            </div>
+            @endforeach
+
             @foreach ($blog as $b)
             <div class="card blog-card mb-3">
                 <a href="{{ route('content.view', ['id' => $b->id]) }}" class="img-link">

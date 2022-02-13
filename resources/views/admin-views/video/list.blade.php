@@ -131,7 +131,7 @@
                                             data-bs-target="#staticBackdrop-{{ $ad->id }}">
                                             <i class="far fa-edit text-success"></i>
                                         </a>
-                                        <a href="{{ route('admin.content.delete', ['id' =>  $ad->id ]) }}"
+                                        <a href="{{ route('admin.video.delete', ['id' =>  $ad->id ]) }}"
                                             class="viewUser btn p-1">
                                             <i class="fas fa-trash text-danger"></i>
                                         </a>

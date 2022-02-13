@@ -113,6 +113,14 @@
                 </li>
             </ul>
 
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.video.list') }}">
+                        <i class="fa-brands fa-youtube text-orange"></i> {{ __('Video') }}
+                    </a>
+                </li>
+            </ul>
+
             <!-- User Section -->
             <h6 class="navbar-heading text-muted">User Section</h6>
             <!-- Navigation -->

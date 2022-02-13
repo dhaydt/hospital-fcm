@@ -64,6 +64,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
             Route::post('/update', [ContentController::class, 'update'])->name('update');
         });
 
+        // Video
+        Route::prefix('video')->name('video.')->group(function () {
+            Route::get('/list', [ContentController::class, 'videoList'])->name('list');
+            Route::get('/add-new', [ContentController::class, 'videoAdd'])->name('addNew');
+            Route::post('/store', [ContentController::class, 'videoStore'])->name('store');
+            Route::get('/delete/{id}', [ContentController::class, 'videoDelete'])->name('delete');
+            Route::post('/status', [ContentController::class, 'status'])->name('status');
+            Route::post('/edit', [ContentController::class, 'edit'])->name('edit');
+            Route::post('/update', [ContentController::class, 'videoUpdate'])->name('update');
+        });
+
         // System Route
         Route::get('maintenance-mode', [SystemController::class, 'maintenance_mode'])->name('maintenance-mode');
 

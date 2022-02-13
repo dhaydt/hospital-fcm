@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '7cc57ebf6e34b6afca584d7dfd0fd6ea136bb534',
+        'reference' => '999e091e1644a11c14409f596e3fb5ad2cf1bdff',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -36,6 +36,15 @@
             'aliases' => array(),
             'reference' => 'ccf109f8755dcc7e58779d1aeb1051b04e0b4bef',
             'dev_requirement' => true,
+        ),
+        'bensampo/laravel-embed' => array(
+            'pretty_version' => 'v1.4.0',
+            'version' => '1.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../bensampo/laravel-embed',
+            'aliases' => array(),
+            'reference' => 'd94dfe948f9edfc0a541067712918630a607a438',
+            'dev_requirement' => false,
         ),
         'brian2694/laravel-toastr' => array(
             'pretty_version' => '5.56',
@@ -454,7 +463,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '7cc57ebf6e34b6afca584d7dfd0fd6ea136bb534',
+            'reference' => '999e091e1644a11c14409f596e3fb5ad2cf1bdff',
             'dev_requirement' => false,
         ),
         'laravel/legacy-factories' => array(

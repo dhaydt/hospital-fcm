@@ -53,7 +53,7 @@
                                 <th scope="col" class="sort" data-sort="budget">Judul</th>
                                 <th scope="col" class="sort" data-sort="category">Kategori</th>
                                 {{-- <th scope="col" class="sort" data-sort="status">Deskripsi</th> --}}
-                                <th scope="col" class="sort" data-sort="status">Image</th>
+                                <th scope="col" class="sort" data-sort="status">Video</th>
                                 <th scope="col" class="sort" data-sort="completion">Action</th>
                             </tr>
                         </thead>
@@ -73,7 +73,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
-                                        <form id="updateForm" action="{{ route('admin.content.update') }}" method="post"
+                                        <form id="updateForm" action="{{ route('admin.video.update') }}" method="post"
                                             enctype="multipart/form-data">
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $ad->id }}">
@@ -91,29 +91,9 @@
                                                         @endforeach
                                                       </select>
                                                 </div>
-                                                <div class="mb-3 d-flex">
-                                                    <div class="col-md-6 pl-0">
-                                                        <div class="custom-file" style="text-align: left">
-                                                            <input type="file" name="image" id="fbimageFileUploaders"
-                                                                class="custom-file-input"
-                                                                accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*">
-                                                            <label class="custom-file-label"
-                                                                for="fbimageFileUploader">Change Image</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <center>
-                                                            <img style="width: auto;border: 1px solid; border-radius: 10px; max-height:200px; max-width:100%;"
-                                                                id="fbImageviewer"
-                                                                src="{{ asset('storage/content/'.$ad->image) }}"
-                                                                alt="banner image" />
-                                                        </center>
-                                                    </div>
-                                                </div>
                                                 <div class="mb-3">
-                                                    <label for="title" class="form-label">Description</label>
-                                                    <textarea name="description" class="editor textarea" cols="30"
-                                                        rows="10" required>{!! $ad->description !!}</textarea>
+                                                    <label for="title" class="form-label">Video link</label>
+                                                    <input type="text" class="form-control" id="ytUrl" value="{{ $ad->url }}" name="ytUrl">
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -138,8 +118,8 @@
                                     {!! $ad->description !!}
                                 </td> --}}
                                 <td class="budget text-center capitalize">
-                                    <img alt="Image placeholder" class="img-list"
-                                        src="{{ asset('storage/content/'.$ad->image) }}">
+                                    <iframe id="ytplayer" type="text/html" width="240" height="120" src="{{ $ad->url }}"
+                                    frameborder="0"></iframe>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center justify-content-evenly action-col">
@@ -179,7 +159,7 @@
                 <div class="text-center p-4">
                     <img class="mb-3" src="{{asset('assets/back-end')}}/svg/illustrations/sorry.svg"
                         alt="Image Description" style="width: 7rem;">
-                    <p class="mb-0">No konten data</p>
+                    <p class="mb-0">No Video konten data</p>
                 </div>
 
                 @endif

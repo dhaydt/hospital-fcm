@@ -7,6 +7,7 @@ use App\CPU\ImageManager;
 use App\Http\Controllers\Controller;
 use App\Models\category;
 use App\Models\Content;
+use App\Models\Video;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
@@ -103,15 +104,14 @@ class ContentController extends Controller
         $search = $request['search'];
         if ($request->has('search')) {
             $key = explode(' ', $request['search']);
-            $admin = Content::where(function ($q) use ($key) {
+            $admin = Video::where(function ($q) use ($key) {
                 foreach ($key as $value) {
-                    $q->orWhere('title', 'like', "%{$value}%")
-                            ->orWhere('content', 'like', "%{$value}%");
+                    $q->orWhere('title', 'like', "%{$value}%");
                 }
             });
             $query_param = ['search' => $request['search']];
         } else {
-            $admin = Content::with('category')->get();
+            $admin = Video::with('category')->get();
         }
         $last = $admin->last();
         if (isset($last)) {
@@ -141,16 +141,16 @@ class ContentController extends Controller
             'category.required' => 'Mohon isi kategori video!',
             'urlSave.required' => 'Mohon isi Link video!',
         ]);
-        dd($request);
-        $checkup = new Content();
+        // dd($request);
+        $checkup = new Video();
 
         $checkup->title = $request['title'];
         $checkup->cat_id = $request['category'];
-        $checkup->description = $request->description;
-        $checkup->image = ImageManager::upload('content/', 'png', $request->file('image'));
+        $checkup->url = $request['urlSave'];
+        // $checkup->image = ImageManager::upload('content/', 'png', $request->file('image'));
 
         $checkup->save();
-        Toastr::success('Konten berhasil ditambahkan');
+        Toastr::success('Video Konten berhasil ditambahkan');
 
         return back();
     }

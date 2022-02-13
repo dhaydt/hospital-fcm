@@ -7,7 +7,7 @@
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-2">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item" aria-current="page"><a href="{{ route('admin.content.list') }}">Video</a></li>
+                            <li class="breadcrumb-item" aria-current="page"><a href="{{ route('admin.video.list') }}">Video</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Add Video</li>
                         </ol>
                     </nav>

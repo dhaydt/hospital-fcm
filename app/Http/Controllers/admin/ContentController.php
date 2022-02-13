@@ -132,14 +132,16 @@ class ContentController extends Controller
 
     public function videoStore(Request $request)
     {
-        // dd($request);
         $request->validate([
             'title' => 'required',
             'category' => 'required',
+            'urlSave' => 'required',
         ], [
-            'title.required' => 'Mohon isi judul konten',
-            'category.required' => 'Mohon isi kategori konten!',
+            'title.required' => 'Mohon isi judul video',
+            'category.required' => 'Mohon isi kategori video!',
+            'urlSave.required' => 'Mohon isi Link video!',
         ]);
+        dd($request);
         $checkup = new Content();
 
         $checkup->title = $request['title'];

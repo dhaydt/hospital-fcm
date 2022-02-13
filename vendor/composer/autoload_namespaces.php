@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
+    'Cohensive\\Embed' => array($vendorDir . '/cohensive/embed/src'),
+    '' => array($vendorDir . '/dereuromark/media-embed/src'),
 );

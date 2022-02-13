@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '999e091e1644a11c14409f596e3fb5ad2cf1bdff',
+        'reference' => '70c0a4fdd408a8818ee50946893d5bbf7b9aea6f',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -64,6 +64,15 @@
             'reference' => 'ca57d18f028f84f777b2168cd1911b0dee2343ae',
             'dev_requirement' => false,
         ),
+        'cohensive/embed' => array(
+            'pretty_version' => 'v5.5.0',
+            'version' => '5.5.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../cohensive/embed',
+            'aliases' => array(),
+            'reference' => 'efbfbd529497f18471d4ac4c2aea7b6b8eb1a336',
+            'dev_requirement' => false,
+        ),
         'cordoval/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -75,6 +84,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'dereuromark/media-embed' => array(
+            'pretty_version' => '0.3.4',
+            'version' => '0.3.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dereuromark/media-embed',
+            'aliases' => array(),
+            'reference' => 'a2be85ad4fc1e17328f8a53fe13a3808301adf80',
+            'dev_requirement' => false,
         ),
         'dflydev/dot-access-data' => array(
             'pretty_version' => 'v3.0.1',
@@ -463,7 +481,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '999e091e1644a11c14409f596e3fb5ad2cf1bdff',
+            'reference' => '70c0a4fdd408a8818ee50946893d5bbf7b9aea6f',
             'dev_requirement' => false,
         ),
         'laravel/legacy-factories' => array(
@@ -564,6 +582,17 @@
             'aliases' => array(),
             'reference' => 'e8ac3499af0ea5b440908e06cc0abe5898008b3c',
             'dev_requirement' => true,
+        ),
+        'merujan99/laravel-video-embed' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../merujan99/laravel-video-embed',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '8cf08c585c8b9560960e80d8d3ce3c0d6640f554',
+            'dev_requirement' => false,
         ),
         'mockery/mockery' => array(
             'pretty_version' => '1.4.4',

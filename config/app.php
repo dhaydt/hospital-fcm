@@ -175,6 +175,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Amirami\Localizator\ServiceProvider::class,
         Ladumor\LaravelPwa\PWAServiceProvider::class,
+        Merujan99\LaravelVideoEmbed\Providers\LaravelVideoEmbedServiceProvider::class,
     ],
 
     /*
@@ -232,5 +233,6 @@ return [
         'Helper' => \App\CPU\Helpers::class,
         'ImageManager' => \App\CPU\ImageManager::class,
         'LaravelPwa' => \Ladumor\LaravelPwa\LaravelPwa::class,
+        'LaravelVideoEmbed' => Merujan99\LaravelVideoEmbed\Facades\LaravelVideoEmbed::class,
     ],
 ];

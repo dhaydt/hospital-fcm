@@ -128,6 +128,7 @@ class ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Merujan99\\LaravelVideoEmbed\\' => 28,
         ),
         'L' => 
         array (
@@ -402,6 +403,10 @@ class ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Merujan99\\LaravelVideoEmbed\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/merujan99/laravel-video-embed/src',
+        ),
         'League\\MimeTypeDetection\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
@@ -589,6 +594,17 @@ class ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
             ),
         ),
+        'C' => 
+        array (
+            'Cohensive\\Embed' => 
+            array (
+                0 => __DIR__ . '/..' . '/cohensive/embed/src',
+            ),
+        ),
+    );
+
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/..' . '/dereuromark/media-embed/src',
     );
 
     public static $classMap = array (
@@ -663,6 +679,7 @@ class ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca
         'App\\Models\\Content' => __DIR__ . '/../..' . '/app/Models/Content.php',
         'App\\Models\\Customer' => __DIR__ . '/../..' . '/app/Models/Customer.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\Video' => __DIR__ . '/../..' . '/app/Models/Video.php',
         'App\\Models\\category' => __DIR__ . '/../..' . '/app/Models/category.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -827,6 +844,12 @@ class ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'Carbon\\TranslatorStrongTypeInterface' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/TranslatorStrongTypeInterface.php',
+        'Cohensive\\Embed\\DataFetcher' => __DIR__ . '/..' . '/cohensive/embed/src/Cohensive/Embed/DataFetcher.php',
+        'Cohensive\\Embed\\Embed' => __DIR__ . '/..' . '/cohensive/embed/src/Cohensive/Embed/Embed.php',
+        'Cohensive\\Embed\\EmbedServiceProvider' => __DIR__ . '/..' . '/cohensive/embed/src/Cohensive/Embed/EmbedServiceProvider.php',
+        'Cohensive\\Embed\\Exceptions\\MissingConfigurationException' => __DIR__ . '/..' . '/cohensive/embed/src/Cohensive/Embed/Exceptions/MissingConfigurationException.php',
+        'Cohensive\\Embed\\Facades\\Embed' => __DIR__ . '/..' . '/cohensive/embed/src/Cohensive/Embed/Facades/Embed.php',
+        'Cohensive\\Embed\\Factory' => __DIR__ . '/..' . '/cohensive/embed/src/Cohensive/Embed/Factory.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
@@ -3447,6 +3470,12 @@ class ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca
         'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
         'League\\MimeTypeDetection\\MimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/MimeTypeDetector.php',
         'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
+        'MediaEmbed\\MediaEmbed' => __DIR__ . '/..' . '/dereuromark/media-embed/src/MediaEmbed/MediaEmbed.php',
+        'MediaEmbed\\Object\\MediaObject' => __DIR__ . '/..' . '/dereuromark/media-embed/src/MediaEmbed/Object/MediaObject.php',
+        'MediaEmbed\\Object\\ObjectInterface' => __DIR__ . '/..' . '/dereuromark/media-embed/src/MediaEmbed/Object/ObjectInterface.php',
+        'Merujan99\\LaravelVideoEmbed\\Facades\\LaravelVideoEmbed' => __DIR__ . '/..' . '/merujan99/laravel-video-embed/src/Facades/LaravelVideoEmbed.php',
+        'Merujan99\\LaravelVideoEmbed\\Providers\\LaravelVideoEmbedServiceProvider' => __DIR__ . '/..' . '/merujan99/laravel-video-embed/src/Providers/LaravelVideoEmbedServiceProvider.php',
+        'Merujan99\\LaravelVideoEmbed\\Services\\LaravelVideoEmbed' => __DIR__ . '/..' . '/merujan99/laravel-video-embed/src/Services/LaravelVideoEmbed.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',
@@ -5999,6 +6028,7 @@ class ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca
             $loader->prefixLengthsPsr4 = ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInit1d3e31d4e6f69a15f7a211caea0a4aca::$classMap;
 
         }, null, ClassLoader::class);

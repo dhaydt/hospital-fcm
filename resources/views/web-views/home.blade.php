@@ -1,5 +1,9 @@
 @extends('layouts.front-end.app')
-
+<style>
+    .img-link.video {
+        height: 270px;
+    }
+</style>
 @section('content')
 <div class="container-fluid px-3 my-6">
 
@@ -34,13 +38,13 @@
             </h4>
             @foreach ($video as $v)
             <div class="card blog-card mb-3">
-                <a href="{{ route('content.view', ['id' => $v->id]) }}" class="img-link">
-                    <iframe id="ytplayer" type="text/html" class="card-img-top" src="{{ $v->url }}"
+                <a href="{{ route('content.view', ['id' => $v->id]) }}" class="img-link video">
+                    <iframe id="ytplayer" type="text/html" class="card-img-top h-100" src="{{ $v->url }}"
                         frameborder="0"></iframe>
                     {{-- <img src="{{ asset('storage/content').'/'.$b['image'] }}" class="card-img-top" alt="blog-img"> --}}
                 </a>
-                <div class="card-body px-2 py-1">
-                    <h5 class="card-title">{{ $v->title }}</h5>
+                <div class="card-body p-2">
+                    <h5 class="card-title capitalize">{{ $v->title }}</h5>
                 </div>
             </div>
             @endforeach

@@ -1,7 +1,7 @@
 @extends('layouts.front-end.app')
 <style>
     .img-link.video {
-        height: 195px;
+        height: 200px;
     }
 </style>
 @section('content')

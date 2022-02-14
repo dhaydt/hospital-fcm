@@ -39,6 +39,7 @@
 
     <!-- Pull refresh plugin -->
     {{-- <link rel="stylesheet" href="{{ asset('assets/front-end/pull/mk-pullfresh.css') }}"> --}}
+    <x-embed-styles />
 </head>
 
 <body class="mb-0">
